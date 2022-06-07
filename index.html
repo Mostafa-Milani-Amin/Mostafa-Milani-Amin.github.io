@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="#" style="text-align:center">
+      <input type="text" id="abjadInput" />
+      <button id="calcbtn">Calculate</button>
+      <p id="abjadResult">0</p>
+    </form>
+    <!-- import calculateAll() from ./index.js -->
+    <script src="./index.js"></script>
+    <script>
+      let calcbtn = document.getElementById("calcbtn");
+      calcbtn.addEventListener("click", fillAbjadForm);
+
+      function fillAbjadForm() {
+        let abjadInput = document.getElementById("abjadInput");
+        let abjadResult = document.getElementById("abjadResult");
+        if (abjadInput.value.length > 0) {
+          abjadResult.textContent = calculateAll(abjadInput.value);
+          abjadInput.value = "";
+        }
+      }
+    </script>
+  </body>
+</html>
