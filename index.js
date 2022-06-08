@@ -48,22 +48,11 @@ let abjadMatrix = {
   غ: 1000,
 };
 
-function abjadCalculator(str) {
-  let strSplitted = str.split("");
-  let sum = 0;
-  for (i = 0; i < strSplitted.length; ++i) {
-    let wordNumber = abjadMatrix[strSplitted[i]];
-    sum += wordNumber === undefined ? 0 : wordNumber;
+function calculateAll(str) {
+  sum = 0;
+  for (let i = 0; i < str.length; i++) {
+    let letterValue = abjadMatrix[str.toLowerCase()[i]];
+    sum += letterValue ? letterValue : 0;
   }
   return sum;
 }
-
-function calculateAll(str) {
-  return str
-    .split(" ")
-    .map((word) => abjadCalculator(word))
-    .reduce((a, b) => a + b);
-}
-// console.log(calculateAll(
-//     `میلانی`
-// ));
