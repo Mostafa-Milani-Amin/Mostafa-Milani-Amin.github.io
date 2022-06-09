@@ -1,4 +1,4 @@
-let abjadMatrix = {
+const abjadMatrix = {
   أ: 1,
   إ: 1,
   ا: 1,
