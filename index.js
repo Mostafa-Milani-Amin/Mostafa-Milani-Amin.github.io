@@ -51,7 +51,7 @@ let abjadMatrix = {
 function calculateAll(str) {
   sum = 0;
   for (let i = 0; i < str.length; i++) {
-    let letterValue = abjadMatrix[str.toLowerCase()[i]];
+    let letterValue = abjadMatrix[str.[i]];
     sum += letterValue ? letterValue : 0;
   }
   return sum;
